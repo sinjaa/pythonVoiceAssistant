@@ -21,7 +21,6 @@ with sr.Microphone() as source:
     text= r.recognize_google(audio)
     print("You:\t"+ text)
     if "what" and "about" and 'you' in text:
-        print("Asistant:\tExcellent Boss.")
         speak("Excellent Boss.")
 
     speak("How may I help?")
