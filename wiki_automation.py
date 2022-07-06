@@ -2,7 +2,9 @@ from selenium import webdriver
 
 class wiki():
     def __init__(self):
-        self.driver= webdriver.Chrome(executable_path='D:\Chromedriver\chromedriver.exe')
+        options = webdriver.ChromeOptions()
+        options.add_experimental_option("detach", True)
+        self.driver= webdriver.Chrome(options=options, executable_path='D:\Chromedriver\chromedriver.exe')
 
     def get_info(self,query):
         self.query=query
